@@ -5,9 +5,10 @@ using UnityEngine;
 public class Controllerxd : MonoBehaviour
 {
 
-    private GameObject playerxd; // Player obeject in the scene 
-
-    private Vector2 touchPosPrevious;
+     
+    private Playerxd playerxd;// Playerxd component of Player object  in the scene 
+    
+    
 
     private float XTotalPos;
 
@@ -15,7 +16,7 @@ public class Controllerxd : MonoBehaviour
     void Start()
     {
         
-        playerxd = GameObject.Find("Player");
+        playerxd = GameObject.Find("Player").GetComponent<Playerxd>();
 
 
 
@@ -54,7 +55,7 @@ public class Controllerxd : MonoBehaviour
 
         }
 
-        playerxd.GetComponent<Playerxd>().RotateZ(XTotalPos);
+        playerxd.RotateZ(XTotalPos);
 
 
     }
