@@ -6,6 +6,11 @@ TagManager:
   tags:
   - RocketmanAnimated
   - Plane
+  - Brick
+  - Ball
+  - RampSmall
+  - collectablePTK
+  - jumpButton
   layers:
   - Default
   - TransparentFX

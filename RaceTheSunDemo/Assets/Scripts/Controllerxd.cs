@@ -7,10 +7,12 @@ public class Controllerxd : MonoBehaviour
 
      
     private Playerxd playerxd;// Playerxd component of Player object  in the scene 
-    
-    
+
+    public static bool modePlay = true;
 
     private float XTotalPos;
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,7 @@ public class Controllerxd : MonoBehaviour
         
         playerxd = GameObject.Find("Player").GetComponent<Playerxd>();
 
-
+        modePlay = true;
 
         
     }
@@ -29,9 +31,12 @@ public class Controllerxd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(modePlay)
+        { 
 
         InputController();
-
+            
+        }
         
     }
 
@@ -46,20 +51,23 @@ public class Controllerxd : MonoBehaviour
             
             Touch finger = Input.GetTouch(i);
             
-            //Debug.Log(Camera.main.ScreenToViewportPoint(finger.position));
+            
 
             float xPos = Camera.main.ScreenToViewportPoint(finger.position).x-0.5f;
 
             XTotalPos += xPos;
             
 
-        }
 
+        }
+        
         playerxd.RotateZ(XTotalPos);
+        
 
 
     }
 
+    
 
     
     
