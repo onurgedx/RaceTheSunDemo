@@ -15,17 +15,17 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.48732647, g: 0.509434, b: 0.5056331, a: 1}
-  m_FogMode: 2
-  m_FogDensity: 0.005
+  m_FogColor: {r: 0.9150943, g: 0.8170215, b: 0.59912777, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.0025
   m_LinearFogStart: 46.3
   m_LinearFogEnd: 575.3
-  m_AmbientSkyColor: {r: 0.6981132, g: 0.4702385, b: 0.66849893, a: 1}
+  m_AmbientSkyColor: {r: 0.735849, g: 0.6979493, b: 0.5789605, a: 1}
   m_AmbientEquatorColor: {r: 0.32766104, g: 0.7197436, b: 0.9811321, a: 1}
   m_AmbientGroundColor: {r: 0.6415094, g: 0.27475968, b: 0.39799824, a: 1}
   m_AmbientIntensity: 0
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
+  m_SubtractiveShadowColor: {r: 0.6415094, g: 0.6255394, b: 0.47447488, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 1
   m_FlareStrength: 1
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 16
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0
+  m_ReflectionIntensity: 0.23
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
+  m_IndirectSpecularColor: {r: 0.21688959, g: 0.24390313, b: 0.28640366, a: 0.23}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: fb872d0dab7d5cf4d8221c099e47b60e, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8fc8a945bdc9fdf45af4779305e5554b, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -155,7 +155,7 @@ RectTransform:
   m_Children:
   - {fileID: 2062165856}
   m_Father: {fileID: 1855044449}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -649,6 +649,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405231427}
+  m_CullTransparentMesh: 1
+--- !u!1 &424840946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424840947}
+  - component: {fileID: 424840949}
+  - component: {fileID: 424840948}
+  m_Layer: 5
+  m_Name: jumpText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &424840947
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424840946}
+  m_LocalRotation: {x: -0, y: 0.01517613, z: 0.32061988, w: 0.9470864}
+  m_LocalPosition: {x: 0, y: 0, z: 12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1855044449}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -0.558, y: 1.647, z: 37.397}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -592, y: -303}
+  m_SizeDelta: {x: 218.41, y: 153.57}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &424840948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424840946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4056604, g: 0.07807048, b: 0.3175234, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 29
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Jumpingooo!
+--- !u!222 &424840949
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424840946}
   m_CullTransparentMesh: 1
 --- !u!1 &443506551
 GameObject:
@@ -1209,7 +1288,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1200
+  far clip plane: 1700
   field of view: 60.207916
   orthographic: 0
   orthographic size: 5
@@ -1274,7 +1353,7 @@ RectTransform:
   m_Children:
   - {fileID: 443506552}
   m_Father: {fileID: 1855044449}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1302,7 +1381,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.6745098}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1409,7 +1488,7 @@ RectTransform:
   - {fileID: 805815044}
   - {fileID: 2075613536}
   m_Father: {fileID: 1855044449}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1805,7 +1884,7 @@ RectTransform:
   - {fileID: 932487120}
   - {fileID: 1529795007}
   m_Father: {fileID: 1855044449}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2034,6 +2113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvassal: {fileID: 1855044450}
   propelDuration: 0.55
+  jumpPower: 0.5
   CollidingTags:
   - Brick
   - Ball
@@ -2368,7 +2448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707265585}
   m_LocalRotation: {x: -0, y: -0, z: -0.24929382, w: 0.9684279}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -2569,10 +2649,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 162823653}
+  - {fileID: 424840947}
+  - {fileID: 966056641}
   - {fileID: 27082397}
   - {fileID: 1028485893}
   - {fileID: 1344564861}
-  - {fileID: 966056641}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2603,6 +2684,7 @@ MonoBehaviour:
   Toggle: {fileID: 829999634}
   jumpButton: {fileID: 966056640}
   playerxd: {fileID: 1365327412}
+  jumpingoText: {fileID: 424840946}
   animatorCanvas: {fileID: 1855044451}
 --- !u!95 &1855044451
 Animator:

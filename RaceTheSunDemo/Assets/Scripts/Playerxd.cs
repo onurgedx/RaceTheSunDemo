@@ -16,6 +16,8 @@ public class Playerxd : MonoBehaviour
     [Tooltip("sagdan yada soldan carptiktan sonra sarsilma suresi")]
     public float propelDuration = 0.55f;
 
+    [Tooltip("yukari ziplama gucu basildiginda ")]
+    public float jumpPower = 0.25f;
 
 
 
@@ -182,18 +184,22 @@ public class Playerxd : MonoBehaviour
     }
 
 
-    private IEnumerator Flyxd(float upAmount2=100f)
+    private IEnumerator Flyxd(float upAmount2 = 100f, float decreaseAmount = 1)
     {
        
+
        
         float upAmount = upAmount2;
         
         while (transform.position.y>=0)
         {
+
+            if (Controllerxd.modePlay) { 
             
             transform.position += Vector3.up * upAmount * Time.deltaTime;
-            upAmount-=20*Time.deltaTime;
+            upAmount-=20*Time.deltaTime*decreaseAmount;
              
+            }
             yield return null;
         
         }
@@ -208,7 +214,7 @@ public class Playerxd : MonoBehaviour
     {
         if(canPlayerJump)
         { 
-        StartCoroutine(Flyxd());
+        StartCoroutine(Flyxd(speed*jumpPower));
         }
     }
 
@@ -228,7 +234,7 @@ public class Playerxd : MonoBehaviour
         if(coll.gameObject.tag =="RampSmall")
         {
 
-            StartCoroutine(Flyxd(coll.GetContact(0).normal.normalized.y*speed/2));
+            StartCoroutine(Flyxd(coll.GetContact(0).normal.normalized.y*speed*0.5f));
 
         }
     }
@@ -244,12 +250,15 @@ public class Playerxd : MonoBehaviour
 
     private void propelSoundEffect()
     {
-        auSource.PlayOneShot(audioClips[1]);
+        
+        auSource.PlayOneShot(audioClips[0]);
 
     }
     private void deadSoundEffect()
     {
-        auSource.PlayOneShot(audioClips[0]);
+        
+
+        auSource.PlayOneShot(audioClips[1]);
     }
 
 

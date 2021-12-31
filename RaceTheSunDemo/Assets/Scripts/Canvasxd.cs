@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Canvasxd : MonoBehaviour
 {
 
-    public GameObject ResumeExit,StopButton,Score,Resume,Exit,Menu,restartxd,Toggle,jumpButton,playerxd;
+    public GameObject ResumeExit,StopButton,Score,Resume,Exit,Menu,restartxd,Toggle,jumpButton,playerxd,jumpingoText;
 
     public Animator animatorCanvas;
     public static bool soundOn=true;
@@ -35,6 +35,7 @@ public class Canvasxd : MonoBehaviour
 
     public void jumpPlayer()
     {   playerxd.GetComponent<Playerxd>().FlyxdPublicvoid();
+        animatorCanvas.SetTrigger("jump");
         jumpButton.SetActive(false);
         
 
@@ -42,6 +43,11 @@ public class Canvasxd : MonoBehaviour
 
     public void jumpOnline()
     {
+        // jump tusuna basildigi zaman
+
+
+
+
         jumpButton.SetActive(true);
     }
     public bool isSoundOn
